@@ -59,6 +59,7 @@ class rest_api_cache{
         header('X-WP-TotalPages: '.$data['X-WP-TotalPages']);
         echo json_encode($data['data']);
         $redis->close();
+	exit; //do not load WP more
   }
 
 }
